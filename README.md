@@ -8,9 +8,7 @@ Para esta prueba se requiere lo siguiente:
 
 1. Se requiere crear un servicio, api, programa o algún tipo de procedimiento que consuman un servicio REST para obtener la información de prueba de ciertas declaraciones.  
 
-*a.* Esta información debe ser almacenada para posteriormente ser consultada (*Si se almacena* 
-
-*en una base de datos, de preferencia que sea en SQL SERVER o MySQL)*  
+*a.* Esta información debe ser almacenada para posteriormente ser consultada (*Si se almacena en una base de datos, de preferencia que sea en SQL SERVER o MySQL)*  
 
 2. Se debe crear un sitio el cual permita la búsqueda de declaraciones por el campo **Nddtimmioe**, dicho sitio deberá mostrar todas las declaraciones que coincidan con la búsqueda y mostrar el detalle de artículos de cada una de las declaraciones en un formato de Maestro-Detalle. También se debe poder visualizar la información de las liquidaciones de dicha liquidación y/o Articulos.   
 
