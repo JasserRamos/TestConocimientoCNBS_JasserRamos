@@ -1,0 +1,184 @@
+USE [TestCNBS]
+GO
+/****** Object:  Table [dbo].[Articulos]    Script Date: 12/8/2024 9:26:05 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Articulos](
+	[Iddt] [varchar](17) NOT NULL,
+	[Nart] [int] NOT NULL,
+	[Carttyp] [varchar](1) NOT NULL,
+	[Codbenef] [varchar](15) NOT NULL,
+	[Cartetamrc] [varchar](2) NULL,
+	[Iespnce] [varchar](17) NOT NULL,
+	[Cartdesc] [varchar](500) NOT NULL,
+	[Cartpayori] [char](2) NULL,
+	[Cartpayacq] [char](2) NULL,
+	[Cartpayprc] [char](2) NULL,
+	[Iddtapu] [varchar](17) NULL,
+	[Nartapu] [int] NULL,
+	[Qartbul] [decimal](18, 2) NULL,
+	[Martunitar] [decimal](18, 4) NULL,
+	[Cartuntdcl] [char](2) NULL,
+	[Qartuntdcl] [decimal](18, 2) NULL,
+	[Cartuntest] [char](2) NULL,
+	[Qartuntest] [decimal](18, 2) NULL,
+	[Qartkgrbrt] [decimal](18, 3) NULL,
+	[Qartkgrnet] [decimal](18, 3) NULL,
+	[Martfob] [decimal](18, 2) NOT NULL,
+	[Martfobdol] [decimal](18, 2) NULL,
+	[Martfle] [decimal](18, 2) NULL,
+	[Martass] [decimal](18, 2) NULL,
+	[Martemma] [decimal](18, 2) NULL,
+	[Martfrai] [decimal](18, 2) NULL,
+	[Martajuinc] [decimal](18, 2) NULL,
+	[Martajuded] [decimal](18, 2) NULL,
+	[Martbasimp] [decimal](18, 2) NOT NULL,
+	[nroTransaccion] [varchar](50) NOT NULL,
+	[fechaHoraTrn] [varchar](50) NULL,
+	[fechaAConsultar] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Iddt] ASC,
+	[Nart] ASC,
+	[nroTransaccion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Declaraciones]    Script Date: 12/8/2024 9:26:05 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Declaraciones](
+	[Iddtextr] [varchar](17) NOT NULL,
+	[Cddtver] [int] NOT NULL,
+	[Iddtext] [varchar](17) NOT NULL,
+	[Iddt] [varchar](17) NOT NULL,
+	[Iext] [varchar](40) NULL,
+	[Cddteta] [varchar](4) NOT NULL,
+	[Dddtoficia] [datetime] NOT NULL,
+	[Dddtrectifa] [datetime] NULL,
+	[Cddtcirvis] [char](1) NULL,
+	[Qddttaxchg] [decimal](12, 6) NOT NULL,
+	[Ista] [varchar](4) NOT NULL,
+	[Cddtbur] [varchar](4) NOT NULL,
+	[Cddtburdst] [varchar](4) NULL,
+	[Cddtdep] [varchar](4) NULL,
+	[Cddtentrep] [varchar](4) NULL,
+	[Cddtage] [varchar](5) NOT NULL,
+	[Cddtagr] [varchar](14) NULL,
+	[Lddtagr] [varchar](100) NULL,
+	[Nddtimmioe] [varchar](14) NOT NULL,
+	[Lddtnomioe] [varchar](100) NOT NULL,
+	[Cddtpayori] [char](2) NULL,
+	[Cddtpaidst] [char](2) NULL,
+	[Lddtnomfod] [varchar](150) NULL,
+	[Cddtincote] [char](3) NULL,
+	[Cddtdevfob] [char](3) NOT NULL,
+	[Cddtdevfle] [char](3) NULL,
+	[Cddtdevass] [char](3) NULL,
+	[Cddttransp] [varchar](5) NULL,
+	[Cddtmdetrn] [char](1) NULL,
+	[Cddtpaytrn] [char](2) NULL,
+	[Nddtart] [int] NOT NULL,
+	[Nddtdelai] [int] NULL,
+	[Dddtbae] [datetime] NULL,
+	[Dddtsalida] [datetime] NULL,
+	[Dddtcancel] [datetime] NULL,
+	[Dddtechean] [date] NULL,
+	[Cddtobs] [varchar](500) NULL,
+	[nroTransaccion] [varchar](50) NOT NULL,
+	[fechaHoraTrn] [varchar](50) NULL,
+	[fechaAConsultar] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Iddt] ASC,
+	[nroTransaccion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[Liquidacion]    Script Date: 12/8/2024 9:26:05 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[Liquidacion](
+	[Iliq] [varchar](17) NOT NULL,
+	[Cliqdop] [varchar](17) NOT NULL,
+	[Cliqeta] [varchar](3) NOT NULL,
+	[Mliq] [decimal](18, 2) NOT NULL,
+	[Mliqgar] [decimal](18, 2) NOT NULL,
+	[dlippay] [datetime] NULL,
+	[Clipnomope] [varchar](20) NULL,
+	[nroTransaccion] [varchar](50) NOT NULL,
+	[fechaHoraTrn] [varchar](50) NULL,
+	[fechaAConsultar] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Iliq] ASC,
+	[nroTransaccion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[LiquidacionArticulos]    Script Date: 12/8/2024 9:26:05 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[LiquidacionArticulos](
+	[Iliq] [varchar](17) NOT NULL,
+	[Nart] [int] NOT NULL,
+	[Clqatax] [varchar](3) NOT NULL,
+	[Clqatyp] [char](1) NOT NULL,
+	[Mlqabas] [decimal](18, 4) NULL,
+	[Qlqacoefic] [decimal](18, 6) NULL,
+	[Mlqa] [decimal](18, 4) NULL,
+	[nroTransaccion] [varchar](50) NOT NULL,
+	[fechaHoraTrn] [varchar](50) NULL,
+	[fechaAConsultar] [varchar](50) NULL,
+PRIMARY KEY CLUSTERED 
+(
+	[Iliq] ASC,
+	[Nart] ASC,
+	[Clqatax] ASC,
+	[Clqatyp] ASC,
+	[nroTransaccion] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+/****** Object:  Table [dbo].[LiquidacionArticulosSinArticulos]    Script Date: 12/8/2024 9:26:05 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[LiquidacionArticulosSinArticulos](
+	[Iliq] [varchar](17) NOT NULL,
+	[Nart] [int] NOT NULL,
+	[Clqatax] [varchar](3) NOT NULL,
+	[Clqatyp] [char](1) NOT NULL,
+	[Mlqabas] [decimal](18, 4) NULL,
+	[Qlqacoefic] [decimal](18, 6) NULL,
+	[Mlqa] [decimal](18, 4) NULL,
+	[nroTransaccion] [varchar](50) NOT NULL,
+	[fechaHoraTrn] [varchar](50) NULL,
+	[fechaAConsultar] [varchar](50) NULL,
+	[descripcionError] [varchar](500) NULL
+) ON [PRIMARY]
+GO
+ALTER TABLE [dbo].[Articulos]  WITH NOCHECK ADD  CONSTRAINT [FK_Articulos_Declaraciones] FOREIGN KEY([Iddt], [nroTransaccion])
+REFERENCES [dbo].[Declaraciones] ([Iddt], [nroTransaccion])
+GO
+ALTER TABLE [dbo].[Articulos] CHECK CONSTRAINT [FK_Articulos_Declaraciones]
+GO
+ALTER TABLE [dbo].[Declaraciones]  WITH NOCHECK ADD  CONSTRAINT [FK_Declaraciones_Liquidacion] FOREIGN KEY([Iddt], [nroTransaccion])
+REFERENCES [dbo].[Liquidacion] ([Iliq], [nroTransaccion])
+GO
+ALTER TABLE [dbo].[Declaraciones] CHECK CONSTRAINT [FK_Declaraciones_Liquidacion]
+GO
+ALTER TABLE [dbo].[LiquidacionArticulos]  WITH NOCHECK ADD  CONSTRAINT [FK_LiquidacionArticulos_Articulos] FOREIGN KEY([Iliq], [Nart], [nroTransaccion])
+REFERENCES [dbo].[Articulos] ([Iddt], [Nart], [nroTransaccion])
+GO
+ALTER TABLE [dbo].[LiquidacionArticulos] CHECK CONSTRAINT [FK_LiquidacionArticulos_Articulos]
+GO

@@ -1,0 +1,338 @@
+﻿@model TestConocimientoCNBS.Models.Declaraciones
+@{
+    ViewData["Title"] = "Detalle de Declaración";
+}
+<div class="container-fluid">
+    <h1 class="text-center my-4">@ViewData["Title"]</h1>
+    <div class="row">
+        <!-- DECLARACION -->
+        <div class=" mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="card-title mb-0">Declaracion</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Iddtextr</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Iddtextr) ? "N/A" : Model.Iddtextr)</p>
+
+                            <strong>Cddtver</strong>
+                            <p>@(Model.Cddtver == 0 ? "N/A" : Model.Cddtver.ToString())</p>
+
+                            <strong>Iddtext</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Iddtext) ? "N/A" : Model.Iddtext)</p>
+
+                            <strong>Iddt</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Iddt) ? "N/A" : Model.Iddt)</p>
+
+                            <strong>Dddtoficia</strong>
+                            <p>@(Model.Dddtoficia == default(DateTime) ? "N/A" : Model.Dddtoficia.ToString("yyyy-MM-dd"))</p>
+
+                            <strong>Iext</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Iext) ? "N/A" : Model.Iext)</p>
+
+                            <strong>Cddteta</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddteta) ? "N/A" : Model.Cddteta)</p>
+
+                            <strong>Cddtcirvis</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtcirvis) ? "N/A" : Model.Cddtcirvis)</p>
+
+                            <strong>Qddttaxchg</strong>
+                            <p>@(Model.Qddttaxchg == 0 ? "N/A" : Model.Qddttaxchg.ToString())</p>
+
+                            <strong>Ista</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Ista) ? "N/A" : Model.Ista)</p>
+
+                            <strong>Cddtbur</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtbur) ? "N/A" : Model.Cddtbur)</p>
+                        </div>
+                        <div class="col-6">
+                            <strong>Dddtrectifa</strong>
+                            <p>@(Model.Dddtrectifa?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+
+                            <strong>Cddtburdst</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtburdst) ? "N/A" : Model.Cddtburdst)</p>
+
+                            <strong>Cddtdep</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtdep) ? "N/A" : Model.Cddtdep)</p>
+
+                            <strong>Cddtentrep</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtentrep) ? "N/A" : Model.Cddtentrep)</p>
+
+                            <strong>Cddtage</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtage) ? "N/A" : Model.Cddtage)</p>
+
+                            <strong>Cddtagr</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtagr) ? "N/A" : Model.Cddtagr)</p>
+
+                            <strong>Lddtagr</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Lddtagr) ? "N/A" : Model.Lddtagr)</p>
+
+                            <strong>Nddtimmioe</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Nddtimmioe) ? "N/A" : Model.Nddtimmioe)</p>
+
+                            <strong>Lddtnomioe</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Lddtnomioe) ? "N/A" : Model.Lddtnomioe)</p>
+
+                            <strong>Cddtpayori</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtpayori) ? "N/A" : Model.Cddtpayori)</p>
+
+                            <strong>Cddtpaidst</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtpaidst) ? "N/A" : Model.Cddtpaidst)</p>
+
+                            <strong>Lddtnomfod</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Lddtnomfod) ? "N/A" : Model.Lddtnomfod)</p>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Cddtincote</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtincote) ? "N/A" : Model.Cddtincote)</p>
+
+                            <strong>Cddtdevfob</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtdevfob) ? "N/A" : Model.Cddtdevfob)</p>
+
+                            <strong>Cddtdevfle</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtdevfle) ? "N/A" : Model.Cddtdevfle)</p>
+
+                            <strong>Cddtdevass</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtdevass) ? "N/A" : Model.Cddtdevass)</p>
+
+                            <strong>Cddttransp</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddttransp) ? "N/A" : Model.Cddttransp)</p>
+
+                            <strong>Cddtmdetrn</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtmdetrn) ? "N/A" : Model.Cddtmdetrn)</p>
+                        </div>
+                        <div class="col-6">
+                            <strong>Cddtpaytrn</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtpaytrn) ? "N/A" : Model.Cddtpaytrn)</p>
+
+                            <strong>Nddtart</strong>
+                            <p>@(Model.Nddtart == 0 ? "N/A" : Model.Nddtart.ToString())</p>
+
+                            <strong>Nddtdelai</strong>
+                            <p>@(Model.Nddtdelai?.ToString() ?? "N/A")</p>
+
+                            <strong>Dddtbae</strong>
+                            <p>@(Model.Dddtbae?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+
+                            <strong>Dddtsalida</strong>
+                            <p>@(Model.Dddtsalida?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+
+                            <strong>Dddtcancel</strong>
+                            <p>@(Model.Dddtcancel?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+
+                            <strong>Dddtechean</strong>
+                            <p>@(Model.Dddtechean?.ToString("yyyy-MM-dd") ?? "N/A")</p>
+
+                            <strong>Cddtobs</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Cddtobs) ? "N/A" : Model.Cddtobs)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <!-- LIQUIDACION -->
+        <div class=" mb-4">
+            <div class="card h-100">
+                <div class="card-header bg-success text-white">
+                    <h5 class="card-title mb-0">Liquidacion</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-6">
+                            <strong>Iliq</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Liquidacion.Iliq) ? "N/A" : Model.Liquidacion.Iliq)</p>
+
+                            <strong>Cliqdop</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Liquidacion.Cliqdop) ? "N/A" : Model.Liquidacion.Cliqdop)</p>
+
+                            <strong>Cliqeta</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Liquidacion.Cliqeta) ? "N/A" : Model.Liquidacion.Cliqeta)</p>
+
+                            <strong>Mliq</strong>
+                            <p>@Model.Liquidacion.Mliq</p>
+                        </div>
+                        <div class="col-6">
+                            <strong>Mliqgar</strong>
+                            <p>@Model.Liquidacion.Mliqgar</p>
+
+                            <strong>Dlippay</strong>
+                            <p>@(Model.Liquidacion.Dlippay.HasValue ? Model.Liquidacion.Dlippay.Value.ToString("yyyy-MM-dd") : "N/A")</p>
+
+                            <strong>Clipnomope</strong>
+                            <p>@(string.IsNullOrEmpty(Model.Liquidacion.Clipnomope) ? "N/A" : Model.Liquidacion.Clipnomope)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <!-- ARTICULOS -->
+        <div class="mb-4">
+            <div class="card h-100">
+                <div class="card-header text-white custom-navbar">
+                    <h5 class="card-title mb-0">Articulos</h5>
+                    <p class="mb-0 text-white" style="font-size: 18px;">(Dar clic para más detalle)</p>
+                </div>
+                <div class="card-body">
+                    @if (Model.Articulos != null && Model.Articulos.Any())
+                    {
+                        <div class="list-group">
+                            @foreach (var articulo in Model.Articulos)
+                            {
+                                <a href="#" class="list-group-item list-group-item-action" data-bs-toggle="modal" data-bs-target="#articuloModal_@articulo.Nart">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h5 class="mb-1">@articulo.Cartdesc</h5>
+                                        <small>N.º ART: @articulo.Nart</small>
+                                    </div>
+                                    <p class="mb-1">Carttyp: @articulo.Carttyp</p>
+                                    <small>Qartkgrnet: @articulo.Qartkgrnet</small>
+                                </a>
+                            }
+                        </div>
+                    }
+                    else
+                    {
+                        <p class="text-muted">No hay Articulos en esta Declaracion</p>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+
+ 
+
+<!-- MODAL PARA CADA DETALLE DE ARTICULOS -->
+@foreach (var articulo in Model.Articulos)
+{
+    <div class="modal fade" id="articuloModal_@articulo.Nart" tabindex="-1" aria-labelledby="articuloModalLabel_@articulo.Nart" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-scrollable">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="articuloModalLabel_@articulo.Nart">Detalles de Artículo: @articulo.Cartdesc</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <dl class="row">
+                                <dt class="col-6">Nart</dt>
+                                <dd class="col-6">@articulo.Nart</dd>
+
+                                <dt class="col-6">Carttyp</dt>
+                                <dd class="col-6">@articulo.Carttyp</dd>
+
+                                <dt class="col-6">Codbenef</dt>
+                                <dd class="col-6">@articulo.Codbenef</dd>
+
+                                <dt class="col-6">Cartdesc</dt>
+                                <dd class="col-6">@articulo.Cartdesc</dd>
+
+                                <dt class="col-6">Cartetamrc</dt>
+                                <dd class="col-6">@articulo.Cartetamrc</dd>
+
+                                <dt class="col-6">Iespnce</dt>
+                                <dd class="col-6">@articulo.Iespnce</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-4">
+                            <dl class="row">
+                                <dt class="col-6">Qartkgrbrt</dt>
+                                <dd class="col-6">@articulo.Qartkgrbrt</dd>
+
+                                <dt class="col-6">Qartkgrnet</dt>
+                                <dd class="col-6">@articulo.Qartkgrnet</dd>
+
+                                <dt class="col-6">Qartbul</dt>
+                                <dd class="col-6">@articulo.Qartbul</dd>
+
+                                <dt class="col-6">Cartuntdcl</dt>
+                                <dd class="col-6">@articulo.Cartuntdcl</dd>
+
+                                <dt class="col-6">Qartuntdcl</dt>
+                                <dd class="col-6">@articulo.Qartuntdcl</dd>
+                            </dl>
+                        </div>
+                        <div class="col-md-4">
+                            <dl class="row">
+                                <dt class="col-6">Martfob</dt>
+                                <dd class="col-6">@articulo.Martfob</dd>
+
+                                <dt class="col-6">Martfobdol</dt>
+                                <dd class="col-6">@articulo.Martfobdol</dd>
+
+                                <dt class="col-6">Martfle</dt>
+                                <dd class="col-6">@articulo.Martfle</dd>
+
+                                <dt class="col-6">Martass</dt>
+                                <dd class="col-6">@articulo.Martass</dd>
+
+                                <dt class="col-6">Martemma</dt>
+                                <dd class="col-6">@articulo.Martemma</dd>
+                            </dl>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-3">Liquidaciones del Artículo</h5>
+
+                    @if (articulo.LiquidacionArticulos != null && articulo.LiquidacionArticulos.Any())
+                    {
+                        <div class="table-responsive">
+                            <table class="table table-bordered table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Iliq</th>
+                                        <th>Nart</th>
+                                        <th>Clqatax</th>
+                                        <th>Clqatyp</th>
+                                        <th>Mlqabas</th>
+                                        <th>Qlqacoefic</th>
+                                        <th>Mlqa</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var liquidacion in articulo.LiquidacionArticulos)
+                                    {
+                                        <tr>
+                                            <td>@liquidacion.Iliq</td>
+                                            <td>@liquidacion.Nart</td>
+                                            <td>@liquidacion.Clqatax</td>
+                                            <td>@liquidacion.Clqatyp</td>
+                                            <td>@liquidacion.Mlqabas</td>
+                                            <td>@liquidacion.Qlqacoefic</td>
+                                            <td>@liquidacion.Mlqa</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    }
+                    else
+                    {
+                        <p>No hay liquidaciones para este artículo.</p>
+                    }
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<!-- Back Button -->
+<div class="text-center mt-3">
+    <a href="@Url.Action("Privacy", "Home")" class="btn btn-outline-primary">Volver</a>
+</div>

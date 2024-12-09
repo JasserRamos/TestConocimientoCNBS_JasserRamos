@@ -1,0 +1,107 @@
+﻿@model List<TestConocimientoCNBS.Models.Declaraciones>
+
+@{
+    var paginaActual = ViewData["paginaActual"] != null ? (int)ViewData["paginaActual"] : 1;
+    var totalPaginas = ViewData["totalPaginas"] != null ? (int)ViewData["totalPaginas"] : 1;
+    var query = ViewData["Query"]?.ToString();
+    ViewBag.Title = "Inciso 2";
+}
+
+
+<h2 class="text-center">Declaraciones</h2>
+
+
+<form method="get" action="@Url.Action("Privacy", "Home")">
+    <div class="row">
+        <div class="col-md-8">
+            <input type="text" id="query" name="query" class="form-control" placeholder="Buscar por Nddtimmioe" value="@query" />
+        </div>
+        <div class="col-md-2">
+            <button type="submit" class="btn btn-primary w-100">
+                <i class="fas fa-search"></i> 
+            </button>
+        </div>
+        <div class="col-md-2">
+            <a href="@Url.Action("Privacy", "Home")" class="btn btn-secondary w-100">
+                <i class="fas fa-undo"></i> 
+            </a>
+        </div>
+    </div>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>NroTransaccion</th>
+            <th>Fecha</th>
+            <th>Iddtextr</th>
+            <th>Cddtver</th>
+            <th>Iddtext</th>
+            <th>Iddt</th>
+            <th>Iext</th>
+            <th>Cddteta</th>
+            <th>Dddtoficia</th>
+            <th>Nddtimmioe</th>
+            <th>Lddtnomioe</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(string.IsNullOrWhiteSpace(item.NroTransaccion) ? "N/A" : item.NroTransaccion)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.FechaAConsultar) ? "N/A" : item.FechaAConsultar)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Iddtextr) ? "N/A" : item.Iddtextr)</td>
+                <td>@(item.Cddtver == null ? "N/A" : item.Cddtver.ToString())</td> 
+                <td>@(string.IsNullOrWhiteSpace(item.Iddtext) ? "N/A" : item.Iddtext)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Iddt) ? "N/A" : item.Iddt)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Iext) ? "N/A" : item.Iext)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Cddteta) ? "N/A" : item.Cddteta)</td>
+                <td>@(item.Dddtoficia == null ? "N/A" : item.Dddtoficia.ToString("dd/MM/yyyy") ?? "N/A")</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Nddtimmioe) ? "N/A" : item.Nddtimmioe)</td>
+                <td>@(string.IsNullOrWhiteSpace(item.Lddtnomioe) ? "N/A" : item.Lddtnomioe)</td>
+                <td>
+                    <a href="@Url.Action("Detalle", "Home", new { nddtimmioe = item.Nddtimmioe, iddt = item.Iddt, NroTransaccion = item.NroTransaccion })" class="btn btn-info btn-sm" title="Ver Detalles">
+                        <i class="fas fa-info-circle"></i>
+                    </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+<div class="text-center">
+    <nav>
+        <ul class="pagination justify-content-center">
+            @if (paginaActual > 1)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Privacy", "Home", new { query = query ?? "", numeroPagina = 1 })">&laquo;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Privacy", "Home", new { query = query ?? "", numeroPagina = paginaActual - 1 })">&lt;</a>
+                </li>
+            }
+
+            @for (int i = Math.Max(1, paginaActual - 1); i <= Math.Min(totalPaginas, paginaActual + 1); i++)
+            {
+                <li class="page-item @(i == paginaActual ? "active" : "")">
+                    <a class="page-link" href="@Url.Action("Privacy", "Home", new { query = query ?? "", numeroPagina = i })">@i</a>
+                </li>
+            }
+
+            @if (paginaActual < totalPaginas)
+            {
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Privacy", "Home", new { query = query ?? "", numeroPagina = paginaActual + 1 })">&gt;</a>
+                </li>
+                <li class="page-item">
+                    <a class="page-link" href="@Url.Action("Privacy", "Home", new { query = query ?? "", numeroPagina = totalPaginas })">&raquo;</a>
+                </li>
+            }
+        </ul>
+    </nav>
+</div>
