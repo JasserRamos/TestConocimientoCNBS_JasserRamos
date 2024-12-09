@@ -14,7 +14,7 @@ Para esta prueba se requiere lo siguiente:
 
 **El sitio de debe crear usando C# o VB.net**  
 
-A continuación se detalla también la estructura de las respuestas XML y JSON para los mensajes.**  
+A continuación se detalla también la estructura de las respuestas XML y JSON para los mensajes. 
 
 ## 2. Contexto de Uso del Servicio   
 
