@@ -64,7 +64,7 @@ Los datos contenidos en la respuesta se listan a continuación:
 
 
 
-|Elemento   |Tipo de Datos  |` `Req. |` `Descripción   |
+|Elemento   |Tipo de Datos  |Req. |Descripción   |
 | - | - | - | - |
 |nroTransaccion (atributo)   |Entero Largo   |Si   |Número único de transacción.   |
 |fechaHoraTrn (atributo)   |Fecha y Hora   |Si   |Fecha y hora de transacción en Sistema Aduanero.   |
