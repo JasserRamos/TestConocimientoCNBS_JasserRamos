@@ -8,15 +8,13 @@ Para esta prueba se requiere lo siguiente:
 
 1. Se requiere crear un servicio, api, programa o algún tipo de procedimiento que consuman un servicio REST para obtener la información de prueba de ciertas declaraciones.  
 
-*a.* Esta información debe ser almacenada para posteriormente ser consultada (*Si se almacena* 
-
-*en una base de datos, de preferencia que sea en SQL SERVER o MySQL)*  
+*a.* Esta información debe ser almacenada para posteriormente ser consultada (*Si se almacena en una base de datos, de preferencia que sea en SQL SERVER o MySQL)*  
 
 2. Se debe crear un sitio el cual permita la búsqueda de declaraciones por el campo **Nddtimmioe**, dicho sitio deberá mostrar todas las declaraciones que coincidan con la búsqueda y mostrar el detalle de artículos de cada una de las declaraciones en un formato de Maestro-Detalle. También se debe poder visualizar la información de las liquidaciones de dicha liquidación y/o Articulos.   
 
 **El sitio de debe crear usando C# o VB.net**  
 
-A continuación se detalla también la estructura de las respuestas XML y JSON para los mensajes.**  
+A continuación se detalla también la estructura de las respuestas XML y JSON para los mensajes. 
 
 ## 2. Contexto de Uso del Servicio   
 
@@ -66,7 +64,7 @@ Los datos contenidos en la respuesta se listan a continuación:
 
 
 
-|Elemento   |Tipo de Datos  |` `Req. |` `Descripción   |
+|Elemento   |Tipo de Datos  |Req. |Descripción   |
 | - | - | - | - |
 |nroTransaccion (atributo)   |Entero Largo   |Si   |Número único de transacción.   |
 |fechaHoraTrn (atributo)   |Fecha y Hora   |Si   |Fecha y hora de transacción en Sistema Aduanero.   |
