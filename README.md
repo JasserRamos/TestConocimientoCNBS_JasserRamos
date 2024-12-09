@@ -252,6 +252,3 @@ public static async System.Threading.Tasks.Task<string> DecompressAsync(string c
     }
 }
 ```
-
-
-Pág. 6  
